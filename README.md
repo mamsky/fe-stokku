@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# Stokku
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Inventory tracking system for Indonesian UMKM using React, Express, and WhatsApp API, featuring automated stock/expiry notifications to reduce loss and improve micro-enterprise sustainability.
 
-Currently, two official plugins are available:
+## Table SQL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+tb_items
+| id | code_item | name |category| quantity | price|
+| :- | :---------| :--- |:------|:-------- |:-------|
+| `Int` | `string` `unique` | `string` |`int`| `int`| `int`|
 
-## Expanding the ESLint configuration
+tb_category
+| id | name |  
+| :-- | :------- |
+| `Int`| `string` |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌿 Branch Naming Example
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+| Type       | Utility                                              | Example                                     |
+| ---------- | ---------------------------------------------------- | ------------------------------------------- |
+| `feature`  | Added new features                                   | `feature/login-page`, `feature/invoice-api` |
+| `fix`      | Fix bug                                              | `fix/cart-total`, `fix/login-error`         |
+| `hotfix`   | Emergency repair in production                       | `hotfix/api-timeout`, `hotfix/logo-typo`    |
+| `refactor` | Changes to code structure without functional changes | `refactor/auth-service`, `refactor/ui-form` |
+| `chore`    | Minor routine/additional tasks                       | `chore/update-deps`, `chore/lint-config`    |
+| `docs`     | Documentation changes                                | `docs/readme-update`, `docs/api-guide`      |
+| `test`     | Testing additions/improvements                       | `test/login-validation`, `test/cart-flow`   |
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Authors
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [@pasteprosmana](https://www.github.com/mamsky)
+- [@tajjudinaulia](https://github.com/Tajjahaadiin)
